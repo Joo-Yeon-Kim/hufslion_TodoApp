@@ -80,7 +80,7 @@
                         {% endif %}
                     </td>
                     <td>
-                        <a class="btn btn-sm btn-info">Update</a>
+                        <a class="btn btn-sm btn-info" href="{% url 'edit' task.id %}">Update</a>
                         <a class="btn btn-sm btn-danger" href="{% url 'delete' task.id %}">Delete</a>
                     </td>
                 </tr>

@@ -1,0 +1,47 @@
+<head>
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+    />
+
+    <style>
+        .app-container {
+            height: 100vh;
+            width: 100%;
+            background-color: #202124;
+        }
+
+        .complete {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+</head>
+
+<div class="app-container d-flex align-items-center justify-content-center flex-column">
+    <h2 style="text-align: center; color: white">Update Task</h2>
+    <h3 style="text-align: center; color: white">"{{ item }}"</h3>
+    <br>
+
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <form method="POST" action="{% url 'update' item.id %}">
+                {% csrf_token %}
+                <p>list: <input type="text" name ="title" value="{{item.title}}"><</p>
+
+                {% if item.complete == True %}
+                <p>complete:  <input type="checkbox" name="complete" checked/></p>
+                {% else %}
+                <p>complete:  <input type="checkbox" name="complete" /></p>
+                {% endif %}
+
+                <p><button type="submit">제출</button></p>
+            </form>
+
+
+        </div>
+    </div>
+</div>s
