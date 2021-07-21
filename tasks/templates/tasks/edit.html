@@ -33,9 +33,9 @@
                 <p>list: <input type="text" name ="title" value="{{item.title}}"><</p>
 
                 {% if item.complete == True %}
-                <p>complete:  <input type="checkbox" name="complete" checked/></p>
+               <label span style ="color:white">Complete? </label> <input type="checkbox" name="complete" checked/></label>
                 {% else %}
-                <p>complete:  <input type="checkbox" name="complete" /></p>
+                <label cspan style ="color:white">Complete?<input type="checkbox" name="complete" /></label>
                 {% endif %}
 
                 <p><button type="submit">제출</button></p>
